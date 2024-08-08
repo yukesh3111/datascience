@@ -1,0 +1,7 @@
+p=int(input("Enter a P number :"))
+q=int(input("Enter a Q number :"))
+temp=p
+p=q
+q=temp
+print("P number is : ",p);
+print("Q number is : ",q);
