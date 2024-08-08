@@ -1,0 +1,33 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+data = { 'Date': pd.date_range(start='2023-01 01', periods=10, freq='D'),
+'Product': ['A', 'B', 'C', 'A', 'B', 'C', 'A', 'B', 'C', 'A'],
+'Sales': np.random.randint(10, 100, size=10),
+'Revenue': np.random.uniform(100, 1000, size=10)
+}
+df = pd.DataFrame(data)
+print("Dataset:\n", df)
+print("\nMissing values:\n", df.isnull().sum())
+print("\nBasic statistics:\n", df.describe())
+print("\nData types:\n", df.dtypes)
+print("\nUnique products:\n", df['Product'].unique())
+summary_stats = df.groupby('Product').agg({ 'Sales': ['sum', 'mean'], 'Revenue': ['sum', 'mean']})
+print("\nSummary statistics by product:\n", summary_stats)
+plt.figure(figsize=(5, 5))
+sns.lineplot(data=df, x='Date', y='Sales', hue='Product')
+plt.title('Sales Over Time')
+plt.show()
+plt.figure(figsize=(5, 5))
+sns.lineplot(data=df, x='Date', y='Revenue', hue='Product')
+plt.title('Revenue Over Time')
+plt.show()
+plt.figure(figsize=(5, 5))
+sns.barplot(data=df, x='Product', y='Sales', estimator=sum)
+plt.title('Total Sales by Product')
+plt.show()
+plt.figure(figsize=(5, 5))
+sns.barplot(data=df, x='Product', y='Revenue', estimator=sum)
+plt.title('Total Revenue by Product')
+plt.show()
