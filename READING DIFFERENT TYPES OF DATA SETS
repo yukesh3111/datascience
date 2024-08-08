@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.read_csv(r'D:/product.csv')
+print(df)
+with open(r'D:/read.txt','r') as f:
+    print(f.read())
