@@ -1,0 +1,14 @@
+import pandas as pd
+import seaborn as sns
+iris = sns.load_dataset('iris')
+print("First few rows of the Iris dataset:")
+print(iris.head())
+setosa = iris[iris['species'] == 'setosa']
+print("\nSubset of the dataset where species is 'setosa':")
+print(setosa.head())
+mean_per_species = iris.groupby('species').mean()
+print("\nMean of each species group:")
+print(mean_per_species)
+sum_per_species = iris.groupby('species').sum()
+print("\nSum of each species group:")
+print(sum_per_species)
