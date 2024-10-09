@@ -1,0 +1,24 @@
+import pandas as pd
+import seaborn as sns
+
+# Load the Iris dataset
+iris = sns.load_dataset('iris')
+
+# Display the first few rows of the dataset 
+print("First few rows of the Iris dataset:")
+print(iris.head())
+
+# Subset: Select rows where the species is 'setosa'
+setosa = iris[iris['species'] == 'setosa']
+print("\nSubset of the dataset where species is 'setosa':") 
+print(setosa.head())
+
+# Aggregate: Calculate the mean of each species group 
+mean_per_species = iris.groupby('species').mean() 
+print("\nMean of each species group:") 
+print(mean_per_species)
+
+# Aggregate: Calculate the sum of each species group 
+sum_per_species = iris.groupby('species').sum() 
+print("\nSum of each species group:") 
+print(sum_per_species)
