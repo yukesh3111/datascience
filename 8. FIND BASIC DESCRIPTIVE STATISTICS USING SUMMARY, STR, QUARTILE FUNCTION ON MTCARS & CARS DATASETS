@@ -1,0 +1,16 @@
+import pandas as pd
+# Read the mtcars dataset
+mtcars = pd.read_csv('D:/LAB/mtcars_data.csv')
+
+# Print summary statistics 
+print("Summary Statistics (mtcars):") 
+print(mtcars.describe())
+
+# Print data structure information 
+print("\nData Structure Information (mtcars):") 
+print(mtcars.info())
+
+# Calculate quartiles
+quartiles = mtcars.quantile([0.25, 0.5, 0.75]) 
+print("\nQuartiles (mtcars):") 
+print(quartiles)
