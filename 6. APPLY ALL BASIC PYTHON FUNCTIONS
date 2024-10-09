@@ -1,0 +1,48 @@
+
+import numpy as np
+
+# Basic Python functions
+
+# Print a message 
+print("Python Program!")
+
+# Define a function to add two numbers 
+def add_numbers(a, b):
+  return a + b
+
+# Use the function
+result = add_numbers(3, 5) print(f"Sum: {result}")
+
+# List operations 
+numbers = [1, 2, 3, 4, 5]
+print("List of numbers:", numbers)
+ 
+# Add an element to the list 
+numbers.append(6)
+print("After appending 6:", numbers)
+
+# Dictionary operations 
+person = {
+"name": "Arun", "age": 30,
+"city": "India"
+}
+print("Person dictionary:", person)
+
+# Access a value by key 
+print("Name:", person["name"])
+
+# Loop through a list 
+print("Loop through list:") 
+for num in numbers:
+  print(num)
+
+# Conditional statements x = 10
+if x > 5:
+  print("x is greater than 5") 
+else:
+  print("x is 5 or less")
+
+# String operations 
+greeting = "Hello" name = "William"
+full_greeting = f"{greeting}, {name}!"
+print(full_greeting)
