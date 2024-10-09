@@ -1,0 +1,15 @@
+array = np.array([1, 2, 3, 4, 5])
+print("NumPy array:", array)
+# Array indexing and slicing 
+print("First element:", array[0]) 
+print("Last element:", array[-1]) 
+print("First three elements:", array[:3])
+# Create a 2D array (matrix)
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) 
+print("2D NumPy array (matrix):")
+print(matrix)
+# Matrix operations 
+print("Transpose of the matrix:") 
+print(np.transpose(matrix))
+print("Sum of all elements in the matrix:", np.sum(matrix)) 
+print("Mean of all elements in the matrix:", np.mean(matrix))
