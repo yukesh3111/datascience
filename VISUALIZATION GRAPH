@@ -1,0 +1,7 @@
+importmatplotlib.pyplot as plt
+x =[10, 20, 30, 40]
+y =[20, 25, 35, 55]
+plt.title("Linear graph", fontsize=25, color="green")
+plt.ylabel('Y-Axis')
+plt.xlabel('X-Axis')
+plt.show()
